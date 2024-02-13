@@ -2,26 +2,82 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
+    "types": [
+      "vite/client",
+      "node"
+    ],
     "skipLibCheck": true,
-    "importHelpers": true,
-    "sourceMap": true,
-
+    "strict": true,
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
+    "allowJs": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*",
+        "./dist/*",
+        ""
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "hooks/*": [
+        "./src/hooks/*"
+      ],
+      "types/*": [
+        "./src/types/*"
+      ],
+      "config/*": [
+        "./src/config/*"
+      ],
+      "pages/*": [
+        "src/components/pages/*"
+      ],
+      "assets/*": [
+        "./src/assets/*"
+      ],
+      "public/*": [
+        "./public/*"
+      ],
+      "styles/*": [
+        "./src/styles/*"
+      ],
+      "store/*": [
+        "./src/store/*"
+      ],
+      "services/*": [
+        "./src/services/*"
+      ],
+      "shadcn/*": [
+        "./src/shadcn/components/*"
+      ],
+      "lib/*": [
+        "./src/lib/*"
+      ],
+      "mocks/*": [
+        "./src/mocks/*"
+      ]
+    }
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src",
+    "*.ts",
+    "*.tsx",
+    "src/**/*.ts",
+    "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

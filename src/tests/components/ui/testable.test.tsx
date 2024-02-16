@@ -6,6 +6,6 @@ describe('Testable', () => {
   test('should render', () => {
     const { container } = render(<Testable />)
 
-    expect(container).toBeDefined()
+    expect(container).toBeInTheDocument()
   })
 })
